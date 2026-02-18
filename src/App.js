@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Header from './components/Header';
 import ProtectedRoute from './components/ProtectedRoute';
+import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
@@ -25,11 +26,11 @@ const AppContent = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
+      {user && <Header />}
       <Routes>
         <Route 
           path="/" 
-          element={user ? <Navigate to="/dashboard" /> : <Navigate to="/login" />} 
+          element={user ? <Navigate to="/dashboard" /> : <LandingPage />} 
         />
         <Route 
           path="/login" 
