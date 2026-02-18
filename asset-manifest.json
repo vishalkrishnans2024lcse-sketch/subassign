@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/subassign/static/js/main.d55f8828.js",
+    "index.html": "/subassign/index.html",
+    "main.d55f8828.js.map": "/subassign/static/js/main.d55f8828.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d55f8828.js"
+  ]
+}
